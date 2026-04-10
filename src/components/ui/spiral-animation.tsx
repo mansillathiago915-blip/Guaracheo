@@ -25,6 +25,8 @@ class AnimationController {
     private ctx: CanvasRenderingContext2D
     private dpr: number
     private size: number
+    private width: number
+    private height: number
     private stars: Star[] = []
     
     private readonly changeEventTime = 0.32
@@ -35,11 +37,13 @@ class AnimationController {
     private readonly numberOfStars = 5000
     private readonly trailLength = 80
     
-    constructor(canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D, dpr: number, size: number) {
+    constructor(canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D, dpr: number, size: number, width: number, height: number) {
         this.canvas = canvas
         this.ctx = ctx
         this.dpr = dpr
         this.size = size
+        this.width = width
+        this.height = height
         this.timeline = gsap.timeline({ repeat: -1 })
         
         this.setupRandomGenerator()
@@ -170,10 +174,10 @@ class AnimationController {
         
         // Deep matrix background
         ctx.fillStyle = '#0b1a12'
-        ctx.fillRect(0, 0, this.size, this.size)
+        ctx.fillRect(0, 0, this.width, this.height)
         
         ctx.save()
-        ctx.translate(this.size / 2, this.size / 2)
+        ctx.translate(this.width / 2, this.height / 2)
         
         const t1 = this.constrain(this.map(this.time, 0, this.changeEventTime + 0.25, 0, 1), 0, 1)
         const t2 = this.constrain(this.map(this.time, this.changeEventTime, 1, 0, 1), 0, 1)
@@ -370,15 +374,15 @@ export function SpiralAnimation() {
         const dpr = window.devicePixelRatio || 1
         const size = Math.max(dimensions.width, dimensions.height)
         
-        canvas.width = size * dpr
-        canvas.height = size * dpr
+        canvas.width = dimensions.width * dpr
+        canvas.height = dimensions.height * dpr
         
         canvas.style.width = `${dimensions.width}px`
         canvas.style.height = `${dimensions.height}px`
         
         ctx.scale(dpr, dpr)
         
-        animationRef.current = new AnimationController(canvas, ctx, dpr, size)
+        animationRef.current = new AnimationController(canvas, ctx, dpr, size, dimensions.width, dimensions.height)
         
         return () => {
             if (animationRef.current) {
