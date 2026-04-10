@@ -34,19 +34,19 @@ export default function HomePage() {
               heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <h1 className="text-6xl md:text-8xl font-black text-[#b4ff00] tracking-widest drop-shadow-[0_0_40px_rgba(180,255,0,0.3)]">
+            <h1 className="text-4xl sm:text-6xl md:text-8xl font-black text-[#b4ff00] tracking-widest drop-shadow-[0_0_40px_rgba(180,255,0,0.3)] px-4">
               GUARACHEOO
             </h1>
-            <p className="mt-4 text-white/60 text-lg md:text-xl tracking-[0.3em] uppercase font-light">
+            <p className="mt-3 sm:mt-4 text-white/60 text-base sm:text-lg md:text-xl tracking-[0.2em] sm:tracking-[0.3em] uppercase font-light px-4">
               Jueves de Guaracheoo
             </p>
-            <p className="mt-2 text-white/40 text-sm tracking-widest">
+            <p className="mt-2 text-white/40 text-xs sm:text-sm tracking-widest">
               Bailamos bajo las estrellas
             </p>
 
-            <div className="mt-10">
+            <div className="mt-8 sm:mt-10">
               <a href="#entradas">
-                <ShinyButton className="text-lg px-10 py-4">
+                <ShinyButton className="text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4">
                   Conseguí tu entrada
                 </ShinyButton>
               </a>
@@ -57,27 +57,27 @@ export default function HomePage() {
         </section>
 
         {/* INFO / FEATURES SECTION */}
-        <section id="info" className="relative py-24 px-4 bg-[#0b1a12]">
+        <section id="info" className="relative py-16 sm:py-24 px-4 bg-[#0b1a12]">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold text-center text-[#b4ff00] tracking-wider mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center text-[#b4ff00] tracking-wider mb-10 sm:mb-16">
               INFO
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="group flex flex-col items-center text-center p-8 rounded-2xl bg-[#0f2618] border border-[#b4ff00]/10 hover:border-[#b4ff00]/30 transition-all duration-300 hover:shadow-[0_0_30px_rgba(180,255,0,0.05)]">
-                <Calendar className="w-10 h-10 text-[#b4ff00] mb-4 group-hover:scale-110 transition-transform" />
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8">
+              <div className="group flex flex-col items-center text-center p-6 sm:p-8 rounded-2xl bg-[#0f2618] border border-[#b4ff00]/10 hover:border-[#b4ff00]/30 transition-all duration-300 hover:shadow-[0_0_30px_rgba(180,255,0,0.05)]">
+                <Calendar className="w-8 h-8 sm:w-10 sm:h-10 text-[#b4ff00] mb-4 group-hover:scale-110 transition-transform" />
                 <h3 className="text-white font-semibold text-lg mb-2">Todos los Jueves</h3>
                 <p className="text-white/40 text-sm">Tu cita semanal con la mejor noche de Mendoza</p>
               </div>
 
-              <div className="group flex flex-col items-center text-center p-8 rounded-2xl bg-[#0f2618] border border-[#b4ff00]/10 hover:border-[#b4ff00]/30 transition-all duration-300 hover:shadow-[0_0_30px_rgba(180,255,0,0.05)]">
-                <Clock className="w-10 h-10 text-[#b4ff00] mb-4 group-hover:scale-110 transition-transform" />
+              <div className="group flex flex-col items-center text-center p-6 sm:p-8 rounded-2xl bg-[#0f2618] border border-[#b4ff00]/10 hover:border-[#b4ff00]/30 transition-all duration-300 hover:shadow-[0_0_30px_rgba(180,255,0,0.05)]">
+                <Clock className="w-8 h-8 sm:w-10 sm:h-10 text-[#b4ff00] mb-4 group-hover:scale-110 transition-transform" />
                 <h3 className="text-white font-semibold text-lg mb-2">00:30 — 06:30</h3>
                 <p className="text-white/40 text-sm">Hasta que salga el sol</p>
               </div>
 
-              <div className="group flex flex-col items-center text-center p-8 rounded-2xl bg-[#0f2618] border border-[#b4ff00]/10 hover:border-[#b4ff00]/30 transition-all duration-300 hover:shadow-[0_0_30px_rgba(180,255,0,0.05)]">
-                <Music className="w-10 h-10 text-[#b4ff00] mb-4 group-hover:scale-110 transition-transform" />
+              <div className="group flex flex-col items-center text-center p-6 sm:p-8 rounded-2xl bg-[#0f2618] border border-[#b4ff00]/10 hover:border-[#b4ff00]/30 transition-all duration-300 hover:shadow-[0_0_30px_rgba(180,255,0,0.05)] sm:col-span-2 md:col-span-1">
+                <Music className="w-8 h-8 sm:w-10 sm:h-10 text-[#b4ff00] mb-4 group-hover:scale-110 transition-transform" />
                 <h3 className="text-white font-semibold text-lg mb-2">Guaracha · RKT · Cachengue</h3>
                 <p className="text-white/40 text-sm">La mejor música para que no pares de bailar</p>
               </div>
@@ -86,22 +86,22 @@ export default function HomePage() {
         </section>
 
         {/* CALL TO ACTION - ENTRADAS */}
-        <section id="entradas" className="relative py-24 px-4 bg-[#0b1a12]">
+        <section id="entradas" className="relative py-16 sm:py-24 px-4 bg-[#0b1a12]">
           <div className="max-w-4xl mx-auto text-center">
-            <Star className="w-12 h-12 text-[#b4ff00] mx-auto mb-6 animate-pulse" />
-            <h2 className="text-3xl md:text-5xl font-bold text-[#b4ff00] tracking-wider mb-4">
+            <Star className="w-10 h-10 sm:w-12 sm:h-12 text-[#b4ff00] mx-auto mb-4 sm:mb-6 animate-pulse" />
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-[#b4ff00] tracking-wider mb-4">
               ENTRADAS & COMBOS
             </h2>
-            <p className="text-white/50 text-lg mb-12 max-w-2xl mx-auto">
+            <p className="text-white/50 text-base sm:text-lg mb-8 sm:mb-12 max-w-2xl mx-auto px-2">
               Asegurá tu lugar en la mejor noche de Mendoza. Entradas anticipadas y combos especiales.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-2">
               <a
                 href="https://www.passline.com/sitio/guaracheoo"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-3 px-8 py-4 bg-[#b4ff00] text-[#0b1a12] rounded-full font-bold text-lg hover:bg-[#c8ff40] transition-all duration-300 hover:shadow-[0_0_30px_rgba(180,255,0,0.3)] hover:scale-105"
+                className="group flex items-center justify-center gap-3 w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-[#b4ff00] text-[#0b1a12] rounded-full font-bold text-base sm:text-lg hover:bg-[#c8ff40] transition-all duration-300 hover:shadow-[0_0_30px_rgba(180,255,0,0.3)] hover:scale-105"
               >
                 <Ticket className="w-5 h-5" />
                 Comprar Entradas
@@ -111,7 +111,7 @@ export default function HomePage() {
                 href="https://wa.me/2616529661"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-3 px-8 py-4 border-2 border-[#b4ff00]/40 text-[#b4ff00] rounded-full font-bold text-lg hover:border-[#b4ff00] transition-all duration-300 hover:shadow-[0_0_20px_rgba(180,255,0,0.1)] hover:scale-105"
+                className="group flex items-center justify-center gap-3 w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 border-2 border-[#b4ff00]/40 text-[#b4ff00] rounded-full font-bold text-base sm:text-lg hover:border-[#b4ff00] transition-all duration-300 hover:shadow-[0_0_20px_rgba(180,255,0,0.1)] hover:scale-105"
               >
                 <MessageCircle className="w-5 h-5" />
                 Lista Free / Cumpleaños
@@ -121,9 +121,9 @@ export default function HomePage() {
         </section>
 
         {/* GALERÍA */}
-        <section id="galeria" className="relative py-24 px-4 bg-[#0b1a12]">
+        <section id="galeria" className="relative py-16 sm:py-24 px-4 bg-[#0b1a12]">
           <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-3xl md:text-5xl font-bold text-[#b4ff00] tracking-wider mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-[#b4ff00] tracking-wider mb-4">
               GALERÍA
             </h2>
             <p className="text-white/40 mb-12">
@@ -140,7 +140,7 @@ export default function HomePage() {
               </ShinyButton>
             </a>
 
-            <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-3">
+            <div className="mt-8 sm:mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 sm:gap-3">
               {[...Array(8)].map((_, i) => (
                 <div
                   key={i}
@@ -156,9 +156,9 @@ export default function HomePage() {
         </section>
 
         {/* UBICACIÓN */}
-        <section id="ubicacion" className="relative py-24 px-4 bg-[#0b1a12]">
+        <section id="ubicacion" className="relative py-16 sm:py-24 px-4 bg-[#0b1a12]">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold text-center text-[#b4ff00] tracking-wider mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center text-[#b4ff00] tracking-wider mb-4">
               UBICACIÓN
             </h2>
             <p className="text-white/40 text-center mb-12">

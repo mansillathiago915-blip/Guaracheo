@@ -101,7 +101,7 @@ export function AnimatedNavFramer() {
   };
 
   return (
-    <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50">
+    <div className="fixed top-4 sm:top-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] sm:w-auto max-w-[95vw]">
       <motion.nav
         initial={{ y: -80, opacity: 0 }}
         animate={isExpanded ? "expanded" : "collapsed"}
@@ -110,20 +110,20 @@ export function AnimatedNavFramer() {
         whileTap={!isExpanded ? { scale: 0.95 } : {}}
         onClick={handleNavClick}
         className={cn(
-          "flex items-center overflow-hidden rounded-full border border-[#b4ff00]/20 bg-[#0b1a12]/80 shadow-lg shadow-[#b4ff00]/5 backdrop-blur-sm h-12",
-          !isExpanded && "cursor-pointer justify-center"
+          "flex items-center overflow-hidden rounded-full border border-[#b4ff00]/20 bg-[#0b1a12]/80 shadow-lg shadow-[#b4ff00]/5 backdrop-blur-sm h-11 sm:h-12",
+          !isExpanded && "cursor-pointer justify-center w-12 mx-auto"
         )}
       >
         <motion.div
           variants={logoVariants}
-          className="flex-shrink-0 flex items-center font-bold pl-4 pr-2 text-[#b4ff00] tracking-wider text-sm"
+          className="flex-shrink-0 hidden sm:flex items-center font-bold pl-4 pr-2 text-[#b4ff00] tracking-wider text-sm"
         >
           GUARACHEOO
         </motion.div>
 
         <motion.div
           className={cn(
-            "flex items-center gap-1 sm:gap-4 pr-4",
+            "flex items-center gap-0.5 sm:gap-1 md:gap-4 px-3 sm:pr-4 sm:pl-2",
             !isExpanded && "pointer-events-none"
           )}
         >
@@ -133,7 +133,7 @@ export function AnimatedNavFramer() {
               href={item.href}
               variants={itemVariants}
               onClick={(e) => e.stopPropagation()}
-              className="text-sm font-medium text-white/70 hover:text-[#b4ff00] transition-colors px-2 py-1"
+              className="text-xs sm:text-sm font-medium text-white/70 hover:text-[#b4ff00] transition-colors px-1.5 sm:px-2 py-1 whitespace-nowrap"
             >
               {item.name}
             </motion.a>
