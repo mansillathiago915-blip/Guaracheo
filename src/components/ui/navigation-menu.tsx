@@ -116,14 +116,14 @@ export function AnimatedNavFramer() {
       >
         <motion.div
           variants={logoVariants}
-          className="flex-shrink-0 hidden sm:flex items-center font-bold pl-4 pr-2 text-[#b4ff00] tracking-wider text-sm"
+          className="flex-shrink-0 flex items-center font-bold pl-3 sm:pl-4 pr-1 sm:pr-2 text-[#b4ff00] tracking-wider text-xs sm:text-sm"
         >
           GUARACHEOO
         </motion.div>
 
         <motion.div
           className={cn(
-            "flex items-center gap-0.5 sm:gap-1 md:gap-4 px-3 sm:pr-4 sm:pl-2",
+            "flex items-center gap-0.5 sm:gap-1 md:gap-4 pr-3 sm:pr-4",
             !isExpanded && "pointer-events-none"
           )}
         >
